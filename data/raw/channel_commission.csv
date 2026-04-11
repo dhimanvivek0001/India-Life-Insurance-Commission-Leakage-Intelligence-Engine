@@ -1,0 +1,11 @@
+insurer,fy,channel,channel_share_pct,commission_cr,lapse_multiplier,channel_lapse_rate_pct,leakage_cr,source
+HDFC Life,FY2025,Corp Agents/Banca,65.0,3809,1.30,16.9,643.7,Calculated from L-5 and distribution mix
+HDFC Life,FY2025,Agency,18.0,1055,0.80,10.4,109.7,Calculated
+HDFC Life,FY2025,Broker,7.0,410,0.90,11.7,48.0,Calculated
+HDFC Life,FY2025,Direct,10.0,586,0.65,8.5,49.8,Calculated
+SUD Life,FY2025,Bancassurance Promoter,90.5,264,1.40,31.2,82.4,ICRA confirmed 90.5% promoter banca
+SUD Life,FY2025,Bancassurance Other,5.1,15,1.30,29.0,4.3,Calculated
+SUD Life,FY2025,Other,4.4,13,1.00,22.3,2.9,Calculated
+Max Life,FY2025,Bancassurance/Corp,59.0,772,1.30,16.1,124.3,Estimated from distribution profile
+Max Life,FY2025,Agency,29.0,379,0.80,9.9,37.5,Estimated
+Max Life,FY2025,Direct/Other,12.0,157,0.70,8.7,13.6,Estimated
