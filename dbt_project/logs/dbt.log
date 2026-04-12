@@ -1,0 +1,974 @@
+[0m23:41:03.433661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002400FECCD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024011FEB890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024011FEBED0>]}
+
+
+============================== 23:41:03.564617 | 95674403-4b7f-486f-ab12-54d38cd5db48 ==============================
+[0m23:41:03.564617 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:41:03.577591 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\office\\.dbt', 'invocation_command': 'dbt ', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\office\\india-insurance-leakage\\dbt_project\\logs'}
+[0m23:41:04.292178 [info ] [MainThread]: dbt version: 1.11.8
+[0m23:41:04.295578 [info ] [MainThread]: python version: 3.13.7
+[0m23:41:04.297393 [info ] [MainThread]: python path: C:\Users\office\AppData\Local\Programs\Python\Python313\python.exe
+[0m23:41:04.298957 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m23:41:25.723149 [info ] [MainThread]: Using profiles dir at C:\Users\office\.dbt
+[0m23:41:25.783104 [info ] [MainThread]: Using profiles.yml file at C:\Users\office\.dbt\profiles.yml
+[0m23:41:25.801074 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\office\india-insurance-leakage\dbt_project\dbt_project.yml
+[0m23:41:25.823069 [info ] [MainThread]: adapter type: duckdb
+[0m23:41:25.824209 [info ] [MainThread]: adapter version: 1.8.2
+[0m23:41:26.076212 [info ] [MainThread]: Configuration:
+[0m23:41:26.077621 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:41:26.080695 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:41:26.083168 [info ] [MainThread]: Required dependencies:
+[0m23:41:26.085093 [debug] [MainThread]: Executing "git --help"
+[0m23:41:27.097290 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:41:27.099903 [debug] [MainThread]: STDERR: "b''"
+[0m23:41:27.149040 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:41:27.154081 [info ] [MainThread]: Connection:
+[0m23:41:27.163351 [info ] [MainThread]:   database: india_insurance
+[0m23:41:27.171162 [info ] [MainThread]:   schema: main
+[0m23:41:27.186804 [info ] [MainThread]:   path: C:\Users\office\india-insurance-leakage\data\duckdb\india_insurance.duckdb
+[0m23:41:27.193344 [info ] [MainThread]:   config_options: None
+[0m23:41:27.198450 [info ] [MainThread]:   extensions: None
+[0m23:41:27.202373 [info ] [MainThread]:   settings: {}
+[0m23:41:27.203723 [info ] [MainThread]:   external_root: .
+[0m23:41:27.204929 [info ] [MainThread]:   use_credential_provider: None
+[0m23:41:27.210330 [info ] [MainThread]:   attach: None
+[0m23:41:27.215108 [info ] [MainThread]:   filesystems: None
+[0m23:41:27.216979 [info ] [MainThread]:   remote: None
+[0m23:41:27.218055 [info ] [MainThread]:   plugins: None
+[0m23:41:27.218762 [info ] [MainThread]:   disable_transactions: False
+[0m23:41:27.219992 [info ] [MainThread]: Registered adapter: duckdb=1.8.2
+[0m23:42:09.499391 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m23:42:50.013908 [debug] [MainThread]: Using duckdb connection "debug"
+[0m23:42:50.017572 [debug] [MainThread]: On debug: select 1 as id
+[0m23:42:50.025033 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:42:53.016975 [debug] [MainThread]: SQL status: OK in 2.958 seconds
+[0m23:42:53.149014 [debug] [MainThread]: On debug: Close
+[0m23:42:53.347369 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:42:53.391704 [info ] [MainThread]: [32mAll checks passed![0m
+[0m23:42:54.085110 [debug] [MainThread]: Command `cli debug` succeeded at 23:42:53.974398 after 113.62 seconds
+[0m23:42:54.202363 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:42:54.556609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002400A620FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240102C0950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024012093AC0>]}
+[0m23:42:54.824457 [debug] [MainThread]: Flushing usage events
+[0m23:43:08.758520 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:45:03.908376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D227FCD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D232651D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D2494BD90>]}
+
+
+============================== 23:45:04.043622 | 7c87dd10-9268-487d-8b77-91c12c0b3c0d ==============================
+[0m23:45:04.043622 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:45:04.065140 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\office\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\office\\india-insurance-leakage\\dbt_project\\logs'}
+[0m23:45:18.399104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7c87dd10-9268-487d-8b77-91c12c0b3c0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D22C9C9D0>]}
+[0m23:45:18.577896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7c87dd10-9268-487d-8b77-91c12c0b3c0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D2494F790>]}
+[0m23:45:18.580573 [info ] [MainThread]: Registered adapter: duckdb=1.8.2
+[0m23:45:20.547621 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m23:45:20.550792 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:45:20.552469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7c87dd10-9268-487d-8b77-91c12c0b3c0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D24A49550>]}
+[0m23:45:29.141782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7c87dd10-9268-487d-8b77-91c12c0b3c0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D249CEB70>]}
+[0m23:45:29.289760 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\office\india-insurance-leakage\dbt_project\target\manifest.json
+[0m23:45:29.302792 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\office\india-insurance-leakage\dbt_project\target\semantic_manifest.json
+[0m23:45:29.365034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7c87dd10-9268-487d-8b77-91c12c0b3c0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D252B5010>]}
+[0m23:45:29.366040 [info ] [MainThread]: Found 3 models, 456 macros
+[0m23:45:29.367025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7c87dd10-9268-487d-8b77-91c12c0b3c0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D24A58870>]}
+[0m23:45:29.389410 [info ] [MainThread]: 
+[0m23:45:29.390784 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:45:29.392084 [info ] [MainThread]: 
+[0m23:45:29.393741 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:45:29.406708 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_india_insurance'
+[0m23:45:29.428704 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_india_insurance'
+[0m23:45:29.454090 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_india_insurance'
+[0m23:45:30.345435 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance"
+[0m23:45:30.346161 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance"
+[0m23:45:30.346745 [debug] [ThreadPool]: On list_india_insurance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "list_india_insurance"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"india_insurance"'
+    
+  
+  
+[0m23:45:30.347469 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance"
+[0m23:45:30.348174 [debug] [ThreadPool]: On list_india_insurance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "list_india_insurance"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"india_insurance"'
+    
+  
+  
+[0m23:45:30.348960 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:45:30.349729 [debug] [ThreadPool]: On list_india_insurance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "list_india_insurance"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"india_insurance"'
+    
+  
+  
+[0m23:45:30.351752 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:45:30.353459 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:45:30.813068 [debug] [ThreadPool]: SQL status: OK in 0.459 seconds
+[0m23:45:30.814828 [debug] [ThreadPool]: SQL status: OK in 0.466 seconds
+[0m23:45:30.819931 [debug] [ThreadPool]: SQL status: OK in 0.468 seconds
+[0m23:45:30.836487 [debug] [ThreadPool]: On list_india_insurance: Close
+[0m23:45:30.843388 [debug] [ThreadPool]: On list_india_insurance: Close
+[0m23:45:30.848431 [debug] [ThreadPool]: On list_india_insurance: Close
+[0m23:45:30.883418 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_india_insurance, now create_india_insurance_main_marts)
+[0m23:45:30.887138 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_india_insurance, now create_india_insurance_main_staging)
+[0m23:45:30.896882 [debug] [ThreadPool]: Creating schema "database: "india_insurance"
+schema: "main_marts"
+"
+[0m23:45:30.901728 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_india_insurance, now create_india_insurance_main_intermediate)
+[0m23:45:30.903818 [debug] [ThreadPool]: Creating schema "database: "india_insurance"
+schema: "main_staging"
+"
+[0m23:45:30.914461 [debug] [ThreadPool]: Creating schema "database: "india_insurance"
+schema: "main_intermediate"
+"
+[0m23:45:30.937390 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_marts"
+[0m23:45:30.951442 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_staging"
+[0m23:45:30.962119 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_intermediate"
+[0m23:45:30.963952 [debug] [ThreadPool]: On create_india_insurance_main_marts: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "create_india_insurance_main_marts"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='india_insurance'
+        and type='sqlite'
+    
+  
+[0m23:45:30.966884 [debug] [ThreadPool]: On create_india_insurance_main_staging: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "create_india_insurance_main_staging"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='india_insurance'
+        and type='sqlite'
+    
+  
+[0m23:45:30.971613 [debug] [ThreadPool]: On create_india_insurance_main_intermediate: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "create_india_insurance_main_intermediate"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='india_insurance'
+        and type='sqlite'
+    
+  
+[0m23:45:30.973916 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:45:30.975808 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:45:30.977943 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:45:31.075040 [debug] [ThreadPool]: SQL status: OK in 0.101 seconds
+[0m23:45:31.076131 [debug] [ThreadPool]: SQL status: OK in 0.098 seconds
+[0m23:45:31.078583 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_marts"
+[0m23:45:31.079138 [debug] [ThreadPool]: SQL status: OK in 0.103 seconds
+[0m23:45:31.079953 [debug] [ThreadPool]: On create_india_insurance_main_marts: BEGIN
+[0m23:45:31.084269 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_intermediate"
+[0m23:45:31.090117 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_staging"
+[0m23:45:31.091583 [debug] [ThreadPool]: On create_india_insurance_main_intermediate: BEGIN
+[0m23:45:31.092694 [debug] [ThreadPool]: On create_india_insurance_main_staging: BEGIN
+[0m23:45:31.100406 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m23:45:31.101578 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m23:45:31.102584 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m23:45:31.103519 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_intermediate"
+[0m23:45:31.104533 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_marts"
+[0m23:45:31.105702 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_staging"
+[0m23:45:31.106887 [debug] [ThreadPool]: On create_india_insurance_main_intermediate: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "create_india_insurance_main_intermediate"} */
+
+    
+    
+        create schema if not exists "india_insurance"."main_intermediate"
+    
+[0m23:45:31.107860 [debug] [ThreadPool]: On create_india_insurance_main_marts: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "create_india_insurance_main_marts"} */
+
+    
+    
+        create schema if not exists "india_insurance"."main_marts"
+    
+[0m23:45:31.108489 [debug] [ThreadPool]: On create_india_insurance_main_staging: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "create_india_insurance_main_staging"} */
+
+    
+    
+        create schema if not exists "india_insurance"."main_staging"
+    
+[0m23:45:31.120052 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m23:45:31.123495 [debug] [ThreadPool]: On create_india_insurance_main_staging: COMMIT
+[0m23:45:31.124942 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_staging"
+[0m23:45:31.126336 [debug] [ThreadPool]: On create_india_insurance_main_staging: COMMIT
+[0m23:45:31.130031 [debug] [ThreadPool]: SQL status: OK in 0.021 seconds
+[0m23:45:31.131534 [debug] [ThreadPool]: SQL status: OK in 0.017 seconds
+[0m23:45:31.142569 [debug] [ThreadPool]: On create_india_insurance_main_intermediate: COMMIT
+[0m23:45:31.145983 [debug] [ThreadPool]: On create_india_insurance_main_marts: COMMIT
+[0m23:45:31.147580 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_intermediate"
+[0m23:45:31.149461 [debug] [ThreadPool]: Using duckdb connection "create_india_insurance_main_marts"
+[0m23:45:31.150934 [debug] [ThreadPool]: SQL status: OK in 0.023 seconds
+[0m23:45:31.151934 [debug] [ThreadPool]: On create_india_insurance_main_intermediate: COMMIT
+[0m23:45:31.153222 [debug] [ThreadPool]: On create_india_insurance_main_marts: COMMIT
+[0m23:45:31.154373 [debug] [ThreadPool]: On create_india_insurance_main_staging: Close
+[0m23:45:31.171742 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m23:45:31.173720 [debug] [ThreadPool]: On create_india_insurance_main_intermediate: Close
+[0m23:45:31.195739 [debug] [ThreadPool]: SQL status: OK in 0.038 seconds
+[0m23:45:31.196803 [debug] [ThreadPool]: On create_india_insurance_main_marts: Close
+[0m23:45:31.326586 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_india_insurance_main_marts'
+[0m23:45:31.341302 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_india_insurance_main_staging'
+[0m23:45:31.346922 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_marts"
+[0m23:45:31.355438 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_staging"
+[0m23:45:31.356752 [debug] [ThreadPool]: On list_india_insurance_main_marts: BEGIN
+[0m23:45:31.358211 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_india_insurance_main_intermediate'
+[0m23:45:31.359452 [debug] [ThreadPool]: On list_india_insurance_main_staging: BEGIN
+[0m23:45:31.360727 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:45:31.368665 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_intermediate"
+[0m23:45:31.371420 [debug] [ThreadPool]: On list_india_insurance_main_intermediate: BEGIN
+[0m23:45:31.369804 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:45:31.372542 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:45:31.777522 [debug] [ThreadPool]: SQL status: OK in 0.416 seconds
+[0m23:45:31.778809 [debug] [ThreadPool]: SQL status: OK in 0.409 seconds
+[0m23:45:31.779461 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_marts"
+[0m23:45:31.780062 [debug] [ThreadPool]: SQL status: OK in 0.408 seconds
+[0m23:45:31.780687 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_staging"
+[0m23:45:31.782999 [debug] [ThreadPool]: On list_india_insurance_main_marts: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "list_india_insurance_main_marts"} */
+select
+      'india_insurance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_marts'
+    and table_catalog = 'india_insurance'
+  
+[0m23:45:31.784576 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_intermediate"
+[0m23:45:31.785838 [debug] [ThreadPool]: On list_india_insurance_main_staging: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "list_india_insurance_main_staging"} */
+select
+      'india_insurance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_staging'
+    and table_catalog = 'india_insurance'
+  
+[0m23:45:31.787958 [debug] [ThreadPool]: On list_india_insurance_main_intermediate: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "list_india_insurance_main_intermediate"} */
+select
+      'india_insurance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_intermediate'
+    and table_catalog = 'india_insurance'
+  
+[0m23:45:31.837654 [debug] [ThreadPool]: SQL status: OK in 0.048 seconds
+[0m23:45:31.839186 [debug] [ThreadPool]: SQL status: OK in 0.049 seconds
+[0m23:45:31.839991 [debug] [ThreadPool]: SQL status: OK in 0.053 seconds
+[0m23:45:31.843114 [debug] [ThreadPool]: On list_india_insurance_main_staging: ROLLBACK
+[0m23:45:31.845676 [debug] [ThreadPool]: On list_india_insurance_main_intermediate: ROLLBACK
+[0m23:45:31.850144 [debug] [ThreadPool]: On list_india_insurance_main_marts: ROLLBACK
+[0m23:45:32.307250 [debug] [ThreadPool]: Failed to rollback 'list_india_insurance_main_staging'
+[0m23:45:32.308539 [debug] [ThreadPool]: Failed to rollback 'list_india_insurance_main_marts'
+[0m23:45:32.309458 [debug] [ThreadPool]: Failed to rollback 'list_india_insurance_main_intermediate'
+[0m23:45:32.310067 [debug] [ThreadPool]: On list_india_insurance_main_staging: Close
+[0m23:45:32.310804 [debug] [ThreadPool]: On list_india_insurance_main_marts: Close
+[0m23:45:32.311447 [debug] [ThreadPool]: On list_india_insurance_main_intermediate: Close
+[0m23:45:32.321387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7c87dd10-9268-487d-8b77-91c12c0b3c0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D25305A90>]}
+[0m23:45:32.322418 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:45:32.322965 [debug] [MainThread]: On master: BEGIN
+[0m23:45:32.323487 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:45:32.369845 [debug] [MainThread]: SQL status: OK in 0.045 seconds
+[0m23:45:32.372392 [debug] [MainThread]: On master: COMMIT
+[0m23:45:32.373115 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:45:32.373598 [debug] [MainThread]: On master: COMMIT
+[0m23:45:32.374627 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:45:32.375247 [debug] [MainThread]: On master: Close
+[0m23:45:32.705614 [debug] [Thread-1 (]: Began running node model.india_insurance_leakage.stg_insurer_summary
+[0m23:45:32.710116 [info ] [Thread-1 (]: 1 of 3 START sql view model main_staging.stg_insurer_summary ................... [RUN]
+[0m23:45:32.716488 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.india_insurance_leakage.stg_insurer_summary'
+[0m23:45:32.719690 [debug] [Thread-1 (]: Began compiling node model.india_insurance_leakage.stg_insurer_summary
+[0m23:45:32.767722 [debug] [Thread-1 (]: Writing injected SQL for node "model.india_insurance_leakage.stg_insurer_summary"
+[0m23:45:32.784226 [debug] [Thread-1 (]: Began executing node model.india_insurance_leakage.stg_insurer_summary
+[0m23:45:32.940510 [debug] [Thread-1 (]: Writing runtime sql for node "model.india_insurance_leakage.stg_insurer_summary"
+[0m23:45:32.955673 [debug] [Thread-1 (]: Using duckdb connection "model.india_insurance_leakage.stg_insurer_summary"
+[0m23:45:32.957076 [debug] [Thread-1 (]: On model.india_insurance_leakage.stg_insurer_summary: BEGIN
+[0m23:45:32.958433 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:45:33.008860 [debug] [Thread-1 (]: SQL status: OK in 0.050 seconds
+[0m23:45:33.009986 [debug] [Thread-1 (]: Using duckdb connection "model.india_insurance_leakage.stg_insurer_summary"
+[0m23:45:33.010931 [debug] [Thread-1 (]: On model.india_insurance_leakage.stg_insurer_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "node_id": "model.india_insurance_leakage.stg_insurer_summary"} */
+
+  
+  create view "india_insurance"."main_staging"."stg_insurer_summary__dbt_tmp" as (
+    -- models/staging/stg_insurer_summary.sql
+-- Staging layer: clean types, rename, add basic derived fields
+-- Source: raw.insurer_summary (real IRDAI L-4 + L-5 data)
+
+WITH source AS (
+    SELECT * FROM raw.insurer_summary
+),
+
+cleaned AS (
+    SELECT
+        -- identifiers
+        insurer                                         AS insurer_name,
+        fy                                              AS financial_year,
+
+        -- premium (₹ Crore)
+        total_premium_cr,
+        fyp_cr                                          AS first_year_premium_cr,
+        renewal_cr                                      AS renewal_premium_cr,
+        single_cr                                       AS single_premium_cr,
+
+        -- commission (₹ Crore) — real Form L-5 numbers
+        gross_comm_cr                                   AS gross_commission_cr,
+        comm_fyp_cr                                     AS commission_fyp_cr,
+        comm_renewal_cr                                 AS commission_renewal_cr,
+        comm_single_cr                                  AS commission_single_cr,
+
+        -- acquisition
+        total_acq_cost_cr                               AS total_acquisition_cost_cr,
+        new_policies,
+        cac_per_policy_rs,
+
+        -- persistency (real press release / ICRA numbers)
+        persistency_13m_pct,
+        persistency_61m_pct,
+        lapse_rate_13m_pct,
+        banca_pct                                       AS banca_channel_pct,
+
+        -- derived: commission rates
+        ROUND(comm_fyp_cr / NULLIF(fyp_cr, 0) * 100, 2)
+                                                        AS commission_rate_fyp_pct,
+        ROUND(gross_comm_cr / NULLIF(total_premium_cr, 0) * 100, 2)
+                                                        AS blended_commission_rate_pct,
+
+        -- derived: expense ratios
+        ROUND(total_acq_cost_cr / NULLIF(total_premium_cr, 0) * 100, 2)
+                                                        AS acquisition_cost_ratio_pct,
+
+        -- sources
+        source_premium,
+        source_commission,
+        source_persistency,
+        ingested_at
+
+    FROM source
+)
+
+SELECT * FROM cleaned
+  );
+
+[0m23:45:33.101211 [debug] [Thread-1 (]: SQL status: OK in 0.089 seconds
+[0m23:45:33.142777 [debug] [Thread-1 (]: Using duckdb connection "model.india_insurance_leakage.stg_insurer_summary"
+[0m23:45:33.147322 [debug] [Thread-1 (]: On model.india_insurance_leakage.stg_insurer_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "node_id": "model.india_insurance_leakage.stg_insurer_summary"} */
+alter view "india_insurance"."main_staging"."stg_insurer_summary__dbt_tmp" rename to "stg_insurer_summary"
+[0m23:45:33.160009 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m23:45:33.240693 [debug] [Thread-1 (]: On model.india_insurance_leakage.stg_insurer_summary: COMMIT
+[0m23:45:33.241463 [debug] [Thread-1 (]: Using duckdb connection "model.india_insurance_leakage.stg_insurer_summary"
+[0m23:45:33.242067 [debug] [Thread-1 (]: On model.india_insurance_leakage.stg_insurer_summary: COMMIT
+[0m23:45:33.255908 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m23:45:33.269087 [debug] [Thread-1 (]: Using duckdb connection "model.india_insurance_leakage.stg_insurer_summary"
+[0m23:45:33.270027 [debug] [Thread-1 (]: On model.india_insurance_leakage.stg_insurer_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "node_id": "model.india_insurance_leakage.stg_insurer_summary"} */
+drop view if exists "india_insurance"."main_staging"."stg_insurer_summary__dbt_backup" cascade
+[0m23:45:33.296476 [debug] [Thread-1 (]: SQL status: OK in 0.026 seconds
+[0m23:45:33.301848 [debug] [Thread-1 (]: On model.india_insurance_leakage.stg_insurer_summary: Close
+[0m23:45:33.391070 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c87dd10-9268-487d-8b77-91c12c0b3c0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D25399700>]}
+[0m23:45:33.393345 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main_staging.stg_insurer_summary .............. [[32mOK[0m in 0.63s]
+[0m23:45:33.438961 [debug] [Thread-1 (]: Finished running node model.india_insurance_leakage.stg_insurer_summary
+[0m23:45:33.441313 [debug] [Thread-2 (]: Began running node model.india_insurance_leakage.int_leakage_calculations
+[0m23:45:33.443333 [info ] [Thread-2 (]: 2 of 3 START sql table model main_intermediate.int_leakage_calculations ........ [RUN]
+[0m23:45:33.536625 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.india_insurance_leakage.int_leakage_calculations'
+[0m23:45:33.538590 [debug] [Thread-2 (]: Began compiling node model.india_insurance_leakage.int_leakage_calculations
+[0m23:45:33.557851 [debug] [Thread-2 (]: Writing injected SQL for node "model.india_insurance_leakage.int_leakage_calculations"
+[0m23:45:33.569135 [debug] [Thread-2 (]: Began executing node model.india_insurance_leakage.int_leakage_calculations
+[0m23:45:33.707197 [debug] [Thread-2 (]: Writing runtime sql for node "model.india_insurance_leakage.int_leakage_calculations"
+[0m23:45:33.731738 [debug] [Thread-2 (]: Using duckdb connection "model.india_insurance_leakage.int_leakage_calculations"
+[0m23:45:33.733071 [debug] [Thread-2 (]: On model.india_insurance_leakage.int_leakage_calculations: BEGIN
+[0m23:45:33.734258 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:45:33.847329 [debug] [Thread-2 (]: SQL status: OK in 0.110 seconds
+[0m23:45:33.848851 [debug] [Thread-2 (]: Using duckdb connection "model.india_insurance_leakage.int_leakage_calculations"
+[0m23:45:33.850932 [debug] [Thread-2 (]: On model.india_insurance_leakage.int_leakage_calculations: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "node_id": "model.india_insurance_leakage.int_leakage_calculations"} */
+
+  
+    
+    
+
+    create  table
+      "india_insurance"."main_intermediate"."int_leakage_calculations__dbt_tmp"
+  
+    as (
+      -- models/intermediate/int_leakage_calculations.sql
+-- Core leakage calculation engine
+-- This is where your strategic insight becomes SQL logic:
+-- "Banca = higher lapse = commission paid on dead policies = leakage"
+
+WITH base AS (
+    SELECT * FROM "india_insurance"."main_staging"."stg_insurer_summary"
+),
+
+leakage AS (
+    SELECT
+        insurer_name,
+        financial_year,
+
+        -- ── PREMIUM LAYER ────────────────────────────────────────
+        total_premium_cr,
+        first_year_premium_cr,
+        renewal_premium_cr,
+
+        -- ── COMMISSION LAYER (real L-5 numbers) ──────────────────
+        gross_commission_cr,
+        commission_fyp_cr,
+        blended_commission_rate_pct,
+        commission_rate_fyp_pct,
+
+        -- ── PERSISTENCY LAYER ────────────────────────────────────
+        persistency_13m_pct,
+        persistency_61m_pct,
+        lapse_rate_13m_pct,
+        banca_channel_pct,
+
+        -- ── CAC LAYER ────────────────────────────────────────────
+        new_policies,
+        cac_per_policy_rs,
+        total_acquisition_cost_cr,
+
+        -- ── LEAKAGE CALCULATIONS ──────────────────────────────────
+        -- Commission leakage: commission on FYP × lapse rate
+        -- Logic: commission paid upfront, policy lapses = money wasted
+        ROUND(commission_fyp_cr * (lapse_rate_13m_pct / 100), 2)
+                                            AS commission_leakage_cr,
+
+        -- Policies lapsed estimate
+        ROUND(new_policies * (lapse_rate_13m_pct / 100), 0)
+                                            AS policies_lapsed_est,
+
+        -- CAC leakage: lapsed policies × cost to acquire them
+        ROUND(
+            (new_policies * (lapse_rate_13m_pct / 100) * cac_per_policy_rs)
+            / 10000000.0,  -- convert to Cr
+        2)                                  AS cac_leakage_cr,
+
+        -- Total economic leakage
+        ROUND(
+            commission_fyp_cr * (lapse_rate_13m_pct / 100) +
+            (new_policies * (lapse_rate_13m_pct / 100) * cac_per_policy_rs) / 10000000.0,
+        2)                                  AS total_economic_leakage_cr,
+
+        -- Leakage as % of total commission
+        ROUND(
+            (commission_fyp_cr * (lapse_rate_13m_pct / 100))
+            / NULLIF(gross_commission_cr, 0) * 100,
+        2)                                  AS leakage_pct_of_commission,
+
+        -- ── BANCA LEAKAGE ─────────────────────────────────────────
+        -- Banca has 35% higher lapse than average (industry benchmark)
+        ROUND(
+            commission_fyp_cr * (banca_channel_pct / 100) *
+            (lapse_rate_13m_pct / 100 * 1.35),
+        2)                                  AS banca_commission_leakage_cr,
+
+        -- ── ML MODEL VALUE ────────────────────────────────────────
+        -- If XGBoost catches 40% of lapses before commission is paid
+        -- (Swiss Re Sigma 2022: AUC 0.75 model catches ~48%, conservative 40%)
+        ROUND(
+            commission_fyp_cr * (lapse_rate_13m_pct / 100) * 0.40,
+        2)                                  AS recoverable_40pct_model_cr,
+
+        -- Model ROI (build cost = ₹0.15 Cr one-time)
+        ROUND(
+            (commission_fyp_cr * (lapse_rate_13m_pct / 100) * 0.40)
+            / 0.15,
+        0)                                  AS model_roi_x,
+
+        -- ── RETENTION ROI (KPOINT model) ──────────────────────────
+        -- ₹10/customer/yr engagement nudge
+        -- 1% conversion on lapsed customers
+        ROUND(
+            (new_policies * (lapse_rate_13m_pct / 100)) * 10 / 10000000.0,
+        4)                                  AS kpoint_spend_cr,
+
+        ROUND(
+            new_policies * (lapse_rate_13m_pct / 100) * 0.01,
+        0)                                  AS customers_retained_kpoint,
+
+        -- ── RISK TIER ─────────────────────────────────────────────
+        CASE
+            WHEN lapse_rate_13m_pct > 20 AND banca_channel_pct > 90
+                THEN 'CRITICAL'
+            WHEN lapse_rate_13m_pct > 15 OR banca_channel_pct > 70
+                THEN 'HIGH'
+            WHEN lapse_rate_13m_pct > 12
+                THEN 'MEDIUM'
+            ELSE 'LOW'
+        END                                 AS leakage_risk_tier,
+
+        -- ── 61M DETERIORATION FLAG ────────────────────────────────
+        CASE
+            WHEN persistency_61m_pct < 30
+                THEN 'CRITICAL - majority lost by yr5'
+            WHEN persistency_61m_pct < 50
+                THEN 'POOR - half lost by yr5'
+            WHEN persistency_61m_pct < 65
+                THEN 'MODERATE'
+            ELSE 'GOOD'
+        END                                 AS longterm_retention_flag
+
+    FROM base
+)
+
+SELECT * FROM leakage
+ORDER BY total_economic_leakage_cr DESC
+    );
+  
+  
+[0m23:45:34.145761 [debug] [Thread-2 (]: SQL status: OK in 0.293 seconds
+[0m23:45:34.152690 [debug] [Thread-2 (]: Using duckdb connection "model.india_insurance_leakage.int_leakage_calculations"
+[0m23:45:34.153820 [debug] [Thread-2 (]: On model.india_insurance_leakage.int_leakage_calculations: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "node_id": "model.india_insurance_leakage.int_leakage_calculations"} */
+alter table "india_insurance"."main_intermediate"."int_leakage_calculations__dbt_tmp" rename to "int_leakage_calculations"
+[0m23:45:34.155333 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:45:34.169868 [debug] [Thread-2 (]: On model.india_insurance_leakage.int_leakage_calculations: COMMIT
+[0m23:45:34.170560 [debug] [Thread-2 (]: Using duckdb connection "model.india_insurance_leakage.int_leakage_calculations"
+[0m23:45:34.172017 [debug] [Thread-2 (]: On model.india_insurance_leakage.int_leakage_calculations: COMMIT
+[0m23:45:34.185225 [debug] [Thread-2 (]: SQL status: OK in 0.012 seconds
+[0m23:45:34.188909 [debug] [Thread-2 (]: Using duckdb connection "model.india_insurance_leakage.int_leakage_calculations"
+[0m23:45:34.189710 [debug] [Thread-2 (]: On model.india_insurance_leakage.int_leakage_calculations: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "node_id": "model.india_insurance_leakage.int_leakage_calculations"} */
+drop table if exists "india_insurance"."main_intermediate"."int_leakage_calculations__dbt_backup" cascade
+[0m23:45:34.191037 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m23:45:34.193548 [debug] [Thread-2 (]: On model.india_insurance_leakage.int_leakage_calculations: Close
+[0m23:45:34.255491 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c87dd10-9268-487d-8b77-91c12c0b3c0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D250DB430>]}
+[0m23:45:34.256539 [info ] [Thread-2 (]: 2 of 3 OK created sql table model main_intermediate.int_leakage_calculations ... [[32mOK[0m in 0.72s]
+[0m23:45:34.257956 [debug] [Thread-2 (]: Finished running node model.india_insurance_leakage.int_leakage_calculations
+[0m23:45:34.259201 [debug] [Thread-3 (]: Began running node model.india_insurance_leakage.fct_leakage
+[0m23:45:34.260198 [info ] [Thread-3 (]: 3 of 3 START sql table model main_marts.fct_leakage ............................ [RUN]
+[0m23:45:34.263865 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.india_insurance_leakage.fct_leakage'
+[0m23:45:34.265355 [debug] [Thread-3 (]: Began compiling node model.india_insurance_leakage.fct_leakage
+[0m23:45:34.272512 [debug] [Thread-3 (]: Writing injected SQL for node "model.india_insurance_leakage.fct_leakage"
+[0m23:45:34.279721 [debug] [Thread-3 (]: Began executing node model.india_insurance_leakage.fct_leakage
+[0m23:45:34.290073 [debug] [Thread-3 (]: Writing runtime sql for node "model.india_insurance_leakage.fct_leakage"
+[0m23:45:34.299331 [debug] [Thread-3 (]: Using duckdb connection "model.india_insurance_leakage.fct_leakage"
+[0m23:45:34.300876 [debug] [Thread-3 (]: On model.india_insurance_leakage.fct_leakage: BEGIN
+[0m23:45:34.302475 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m23:45:34.353010 [debug] [Thread-3 (]: SQL status: OK in 0.051 seconds
+[0m23:45:34.353712 [debug] [Thread-3 (]: Using duckdb connection "model.india_insurance_leakage.fct_leakage"
+[0m23:45:34.354620 [debug] [Thread-3 (]: On model.india_insurance_leakage.fct_leakage: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "node_id": "model.india_insurance_leakage.fct_leakage"} */
+
+  
+    
+    
+
+    create  table
+      "india_insurance"."main_marts"."fct_leakage__dbt_tmp"
+  
+    as (
+      -- models/marts/fct_leakage.sql
+-- FINAL FACT TABLE — The consulting deliverable
+-- Every row = one insurer's complete leakage profile
+-- This is what feeds Kibana, Streamlit, and the XGBoost model
+
+WITH leakage AS (
+    SELECT * FROM "india_insurance"."main_intermediate"."int_leakage_calculations"
+),
+
+channel AS (
+    SELECT
+        insurer,
+        fy,
+        SUM(CASE WHEN channel ILIKE '%banca%' OR channel ILIKE '%corp%'
+                 THEN leakage_cr ELSE 0 END) AS banca_channel_leakage_cr,
+        SUM(CASE WHEN channel ILIKE '%agency%'
+                 THEN leakage_cr ELSE 0 END) AS agency_channel_leakage_cr,
+        MAX(channel_lapse_rate_pct)           AS max_channel_lapse_pct,
+        COUNT(DISTINCT channel)               AS num_channels
+    FROM raw.channel_commission
+    GROUP BY insurer, fy
+),
+
+cohort AS (
+    SELECT
+        insurer,
+        MAX(CASE WHEN cohort_month = 13 THEN yoy_change_bps END) AS persistency_13m_yoy_bps,
+        MAX(CASE WHEN cohort_month = 61 THEN yoy_change_bps END) AS persistency_61m_yoy_bps,
+        MAX(CASE WHEN cohort_month = 61 THEN persistency_pct  END) AS persistency_61m_latest
+    FROM raw.persistency_cohorts
+    WHERE fy = 'FY2025'
+    GROUP BY insurer
+),
+
+final AS (
+    SELECT
+        -- ── IDENTIFIERS ───────────────────────────────────────────
+        l.insurer_name,
+        l.financial_year,
+        l.leakage_risk_tier,
+        l.longterm_retention_flag,
+
+        -- ── SCALE ────────────────────────────────────────────────
+        l.total_premium_cr,
+        l.first_year_premium_cr,
+        l.new_policies,
+        ROUND(l.first_year_premium_cr / l.new_policies * 100, 0)
+                                            AS avg_ticket_size_rs,
+
+        -- ── COMMISSION (REAL L-5 NUMBERS) ────────────────────────
+        l.gross_commission_cr,
+        l.commission_fyp_cr,
+        l.commission_rate_fyp_pct,
+        l.blended_commission_rate_pct,
+        l.total_acquisition_cost_cr,
+        l.cac_per_policy_rs,
+
+        -- ── PERSISTENCY ──────────────────────────────────────────
+        l.persistency_13m_pct,
+        l.persistency_61m_pct,
+        l.lapse_rate_13m_pct,
+        l.banca_channel_pct,
+        co.persistency_13m_yoy_bps,
+        co.persistency_61m_yoy_bps,
+
+        -- ── LEAKAGE (THE HEADLINE NUMBERS) ───────────────────────
+        l.commission_leakage_cr,
+        l.policies_lapsed_est,
+        l.cac_leakage_cr,
+        l.total_economic_leakage_cr,
+        l.leakage_pct_of_commission,
+        l.banca_commission_leakage_cr,
+
+        -- ── CHANNEL BREAKDOWN ────────────────────────────────────
+        ch.banca_channel_leakage_cr,
+        ch.agency_channel_leakage_cr,
+        ch.max_channel_lapse_pct,
+
+        -- ── MODEL VALUE ──────────────────────────────────────────
+        l.recoverable_40pct_model_cr,
+        l.model_roi_x,
+        0.15                                AS model_build_cost_cr,
+
+        -- ── RETENTION (KPOINT) ───────────────────────────────────
+        l.kpoint_spend_cr,
+        l.customers_retained_kpoint,
+
+        -- ── RANKINGS ─────────────────────────────────────────────
+        RANK() OVER (ORDER BY l.total_economic_leakage_cr DESC)
+                                            AS leakage_rank,
+        RANK() OVER (ORDER BY l.persistency_13m_pct DESC)
+                                            AS persistency_rank_best,
+        RANK() OVER (ORDER BY l.lapse_rate_13m_pct DESC)
+                                            AS lapse_risk_rank_worst,
+
+        -- ── METADATA ─────────────────────────────────────────────
+        CURRENT_TIMESTAMP                   AS model_run_at
+
+    FROM leakage l
+    LEFT JOIN channel ch
+        ON l.insurer_name = ch.insurer
+        AND l.financial_year = ch.fy
+    LEFT JOIN cohort co
+        ON l.insurer_name = co.insurer
+)
+
+SELECT * FROM final
+ORDER BY total_economic_leakage_cr DESC
+    );
+  
+  
+[0m23:45:34.501309 [debug] [Thread-3 (]: SQL status: OK in 0.146 seconds
+[0m23:45:34.505664 [debug] [Thread-3 (]: Using duckdb connection "model.india_insurance_leakage.fct_leakage"
+[0m23:45:34.506285 [debug] [Thread-3 (]: On model.india_insurance_leakage.fct_leakage: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "node_id": "model.india_insurance_leakage.fct_leakage"} */
+alter table "india_insurance"."main_marts"."fct_leakage__dbt_tmp" rename to "fct_leakage"
+[0m23:45:34.507679 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m23:45:34.512030 [debug] [Thread-3 (]: On model.india_insurance_leakage.fct_leakage: COMMIT
+[0m23:45:34.513261 [debug] [Thread-3 (]: Using duckdb connection "model.india_insurance_leakage.fct_leakage"
+[0m23:45:34.513974 [debug] [Thread-3 (]: On model.india_insurance_leakage.fct_leakage: COMMIT
+[0m23:45:34.538721 [debug] [Thread-3 (]: SQL status: OK in 0.024 seconds
+[0m23:45:34.542461 [debug] [Thread-3 (]: Using duckdb connection "model.india_insurance_leakage.fct_leakage"
+[0m23:45:34.544437 [debug] [Thread-3 (]: On model.india_insurance_leakage.fct_leakage: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "node_id": "model.india_insurance_leakage.fct_leakage"} */
+drop table if exists "india_insurance"."main_marts"."fct_leakage__dbt_backup" cascade
+[0m23:45:34.546720 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m23:45:34.550898 [debug] [Thread-3 (]: On model.india_insurance_leakage.fct_leakage: Close
+[0m23:45:34.618009 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c87dd10-9268-487d-8b77-91c12c0b3c0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D255BF350>]}
+[0m23:45:34.619091 [info ] [Thread-3 (]: 3 of 3 OK created sql table model main_marts.fct_leakage ....................... [[32mOK[0m in 0.36s]
+[0m23:45:34.620414 [debug] [Thread-3 (]: Finished running node model.india_insurance_leakage.fct_leakage
+[0m23:45:34.622745 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:45:34.623331 [debug] [MainThread]: On master: BEGIN
+[0m23:45:34.623809 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:45:34.685653 [debug] [MainThread]: SQL status: OK in 0.062 seconds
+[0m23:45:34.686352 [debug] [MainThread]: On master: COMMIT
+[0m23:45:34.686902 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:45:34.687427 [debug] [MainThread]: On master: COMMIT
+[0m23:45:34.688280 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:45:34.688862 [debug] [MainThread]: On master: Close
+[0m23:45:34.698949 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:45:34.699899 [debug] [MainThread]: Connection 'create_india_insurance_main_intermediate' was properly closed.
+[0m23:45:34.700931 [debug] [MainThread]: Connection 'create_india_insurance_main_staging' was properly closed.
+[0m23:45:34.701436 [debug] [MainThread]: Connection 'create_india_insurance_main_marts' was properly closed.
+[0m23:45:34.701865 [debug] [MainThread]: Connection 'list_india_insurance_main_marts' was properly closed.
+[0m23:45:34.702281 [debug] [MainThread]: Connection 'list_india_insurance_main_staging' was properly closed.
+[0m23:45:34.702689 [debug] [MainThread]: Connection 'list_india_insurance_main_intermediate' was properly closed.
+[0m23:45:34.703119 [debug] [MainThread]: Connection 'model.india_insurance_leakage.stg_insurer_summary' was properly closed.
+[0m23:45:34.703949 [debug] [MainThread]: Connection 'model.india_insurance_leakage.int_leakage_calculations' was properly closed.
+[0m23:45:34.704571 [debug] [MainThread]: Connection 'model.india_insurance_leakage.fct_leakage' was properly closed.
+[0m23:45:34.705457 [info ] [MainThread]: 
+[0m23:45:34.706497 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 5.31 seconds (5.31s).
+[0m23:45:34.708667 [debug] [MainThread]: Command end result
+[0m23:45:34.784796 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\office\india-insurance-leakage\dbt_project\target\manifest.json
+[0m23:45:34.790519 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\office\india-insurance-leakage\dbt_project\target\semantic_manifest.json
+[0m23:45:34.807232 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\office\india-insurance-leakage\dbt_project\target\run_results.json
+[0m23:45:34.807968 [info ] [MainThread]: 
+[0m23:45:34.809073 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:45:34.811330 [info ] [MainThread]: 
+[0m23:45:34.812923 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m23:45:34.817220 [debug] [MainThread]: Command `cli run` succeeded at 23:45:34.816833 after 32.91 seconds
+[0m23:45:34.817954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D249B6BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D1CF07150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D232AE450>]}
+[0m23:45:34.818552 [debug] [MainThread]: Flushing usage events
+[0m23:45:37.486125 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:48:09.986830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002839456CD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028394FD51D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000283966BBD90>]}
+
+
+============================== 23:48:10.054364 | 8160e37c-1b35-46ec-9d01-da6297342b63 ==============================
+[0m23:48:10.054364 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:48:10.065233 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\office\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt ', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\office\\india-insurance-leakage\\dbt_project\\logs'}
+[0m23:48:12.166873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8160e37c-1b35-46ec-9d01-da6297342b63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028394A109D0>]}
+[0m23:48:12.353202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8160e37c-1b35-46ec-9d01-da6297342b63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000283966BF790>]}
+[0m23:48:12.478447 [info ] [MainThread]: Registered adapter: duckdb=1.8.2
+[0m23:48:16.293481 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m23:48:19.933291 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:48:19.933991 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:48:19.934430 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:48:19.990805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8160e37c-1b35-46ec-9d01-da6297342b63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000283967BB950>]}
+[0m23:48:20.151526 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\office\india-insurance-leakage\dbt_project\target\manifest.json
+[0m23:48:20.190960 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\office\india-insurance-leakage\dbt_project\target\semantic_manifest.json
+[0m23:48:20.197964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8160e37c-1b35-46ec-9d01-da6297342b63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028396742990>]}
+[0m23:48:20.199135 [info ] [MainThread]: Found 3 models, 456 macros
+[0m23:48:20.200249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8160e37c-1b35-46ec-9d01-da6297342b63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028396EBF4D0>]}
+[0m23:48:20.210973 [info ] [MainThread]: 
+[0m23:48:20.214992 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:48:20.216447 [info ] [MainThread]: 
+[0m23:48:20.218071 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:48:20.230705 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_india_insurance_main_marts'
+[0m23:48:20.249804 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_india_insurance_main_staging'
+[0m23:48:20.280198 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_india_insurance_main_intermediate'
+[0m23:48:21.056870 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_marts"
+[0m23:48:21.057982 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_intermediate"
+[0m23:48:21.058660 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_staging"
+[0m23:48:21.059426 [debug] [ThreadPool]: On list_india_insurance_main_marts: BEGIN
+[0m23:48:21.061271 [debug] [ThreadPool]: On list_india_insurance_main_intermediate: BEGIN
+[0m23:48:21.062914 [debug] [ThreadPool]: On list_india_insurance_main_staging: BEGIN
+[0m23:48:21.063957 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:48:21.064731 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:48:21.065243 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:48:21.355483 [debug] [ThreadPool]: SQL status: OK in 0.290 seconds
+[0m23:48:21.356401 [debug] [ThreadPool]: SQL status: OK in 0.292 seconds
+[0m23:48:21.357121 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_staging"
+[0m23:48:21.357773 [debug] [ThreadPool]: SQL status: OK in 0.293 seconds
+[0m23:48:21.358484 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_marts"
+[0m23:48:21.359216 [debug] [ThreadPool]: On list_india_insurance_main_staging: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "list_india_insurance_main_staging"} */
+select
+      'india_insurance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_staging'
+    and table_catalog = 'india_insurance'
+  
+[0m23:48:21.362360 [debug] [ThreadPool]: Using duckdb connection "list_india_insurance_main_intermediate"
+[0m23:48:21.364037 [debug] [ThreadPool]: On list_india_insurance_main_marts: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "list_india_insurance_main_marts"} */
+select
+      'india_insurance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_marts'
+    and table_catalog = 'india_insurance'
+  
+[0m23:48:21.371857 [debug] [ThreadPool]: On list_india_insurance_main_intermediate: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "connection_name": "list_india_insurance_main_intermediate"} */
+select
+      'india_insurance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_intermediate'
+    and table_catalog = 'india_insurance'
+  
+[0m23:48:21.583350 [debug] [ThreadPool]: SQL status: OK in 0.218 seconds
+[0m23:48:21.594694 [debug] [ThreadPool]: SQL status: OK in 0.222 seconds
+[0m23:48:21.605903 [debug] [ThreadPool]: SQL status: OK in 0.233 seconds
+[0m23:48:21.618352 [debug] [ThreadPool]: On list_india_insurance_main_marts: ROLLBACK
+[0m23:48:21.622459 [debug] [ThreadPool]: On list_india_insurance_main_staging: ROLLBACK
+[0m23:48:21.629951 [debug] [ThreadPool]: On list_india_insurance_main_intermediate: ROLLBACK
+[0m23:48:21.638926 [debug] [ThreadPool]: Failed to rollback 'list_india_insurance_main_marts'
+[0m23:48:21.641566 [debug] [ThreadPool]: Failed to rollback 'list_india_insurance_main_staging'
+[0m23:48:21.648433 [debug] [ThreadPool]: Failed to rollback 'list_india_insurance_main_intermediate'
+[0m23:48:21.650473 [debug] [ThreadPool]: On list_india_insurance_main_marts: Close
+[0m23:48:21.651661 [debug] [ThreadPool]: On list_india_insurance_main_staging: Close
+[0m23:48:21.652804 [debug] [ThreadPool]: On list_india_insurance_main_intermediate: Close
+[0m23:48:21.713563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8160e37c-1b35-46ec-9d01-da6297342b63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028396D1C120>]}
+[0m23:48:21.795089 [debug] [Thread-1 (]: Began running node model.india_insurance_leakage.fct_leakage
+[0m23:48:21.797085 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.india_insurance_leakage.fct_leakage'
+[0m23:48:21.798730 [debug] [Thread-1 (]: Began compiling node model.india_insurance_leakage.fct_leakage
+[0m23:48:21.823023 [debug] [Thread-1 (]: Writing injected SQL for node "model.india_insurance_leakage.fct_leakage"
+[0m23:48:21.827368 [debug] [Thread-1 (]: Began executing node model.india_insurance_leakage.fct_leakage
+[0m23:48:21.861313 [debug] [Thread-1 (]: Using duckdb connection "model.india_insurance_leakage.fct_leakage"
+[0m23:48:21.862883 [debug] [Thread-1 (]: On model.india_insurance_leakage.fct_leakage: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "india_insurance", "target_name": "dev", "node_id": "model.india_insurance_leakage.fct_leakage"} */
+
+  
+  -- models/marts/fct_leakage.sql
+-- FINAL FACT TABLE — The consulting deliverable
+-- Every row = one insurer's complete leakage profile
+-- This is what feeds Kibana, Streamlit, and the XGBoost model
+
+WITH leakage AS (
+    SELECT * FROM "india_insurance"."main_intermediate"."int_leakage_calculations"
+),
+
+channel AS (
+    SELECT
+        insurer,
+        fy,
+        SUM(CASE WHEN channel ILIKE '%banca%' OR channel ILIKE '%corp%'
+                 THEN leakage_cr ELSE 0 END) AS banca_channel_leakage_cr,
+        SUM(CASE WHEN channel ILIKE '%agency%'
+                 THEN leakage_cr ELSE 0 END) AS agency_channel_leakage_cr,
+        MAX(channel_lapse_rate_pct)           AS max_channel_lapse_pct,
+        COUNT(DISTINCT channel)               AS num_channels
+    FROM raw.channel_commission
+    GROUP BY insurer, fy
+),
+
+cohort AS (
+    SELECT
+        insurer,
+        MAX(CASE WHEN cohort_month = 13 THEN yoy_change_bps END) AS persistency_13m_yoy_bps,
+        MAX(CASE WHEN cohort_month = 61 THEN yoy_change_bps END) AS persistency_61m_yoy_bps,
+        MAX(CASE WHEN cohort_month = 61 THEN persistency_pct  END) AS persistency_61m_latest
+    FROM raw.persistency_cohorts
+    WHERE fy = 'FY2025'
+    GROUP BY insurer
+),
+
+final AS (
+    SELECT
+        -- ── IDENTIFIERS ───────────────────────────────────────────
+        l.insurer_name,
+        l.financial_year,
+        l.leakage_risk_tier,
+        l.longterm_retention_flag,
+
+        -- ── SCALE ────────────────────────────────────────────────
+        l.total_premium_cr,
+        l.first_year_premium_cr,
+        l.new_policies,
+        ROUND(l.first_year_premium_cr / l.new_policies * 100, 0)
+                                            AS avg_ticket_size_rs,
+
+        -- ── COMMISSION (REAL L-5 NUMBERS) ────────────────────────
+        l.gross_commission_cr,
+        l.commission_fyp_cr,
+        l.commission_rate_fyp_pct,
+        l.blended_commission_rate_pct,
+        l.total_acquisition_cost_cr,
+        l.cac_per_policy_rs,
+
+        -- ── PERSISTENCY ──────────────────────────────────────────
+        l.persistency_13m_pct,
+        l.persistency_61m_pct,
+        l.lapse_rate_13m_pct,
+        l.banca_channel_pct,
+        co.persistency_13m_yoy_bps,
+        co.persistency_61m_yoy_bps,
+
+        -- ── LEAKAGE (THE HEADLINE NUMBERS) ───────────────────────
+        l.commission_leakage_cr,
+        l.policies_lapsed_est,
+        l.cac_leakage_cr,
+        l.total_economic_leakage_cr,
+        l.leakage_pct_of_commission,
+        l.banca_commission_leakage_cr,
+
+        -- ── CHANNEL BREAKDOWN ────────────────────────────────────
+        ch.banca_channel_leakage_cr,
+        ch.agency_channel_leakage_cr,
+        ch.max_channel_lapse_pct,
+
+        -- ── MODEL VALUE ──────────────────────────────────────────
+        l.recoverable_40pct_model_cr,
+        l.model_roi_x,
+        0.15                                AS model_build_cost_cr,
+
+        -- ── RETENTION (KPOINT) ───────────────────────────────────
+        l.kpoint_spend_cr,
+        l.customers_retained_kpoint,
+
+        -- ── RANKINGS ─────────────────────────────────────────────
+        RANK() OVER (ORDER BY l.total_economic_leakage_cr DESC)
+                                            AS leakage_rank,
+        RANK() OVER (ORDER BY l.persistency_13m_pct DESC)
+                                            AS persistency_rank_best,
+        RANK() OVER (ORDER BY l.lapse_rate_13m_pct DESC)
+                                            AS lapse_risk_rank_worst,
+
+        -- ── METADATA ─────────────────────────────────────────────
+        CURRENT_TIMESTAMP                   AS model_run_at
+
+    FROM leakage l
+    LEFT JOIN channel ch
+        ON l.insurer_name = ch.insurer
+        AND l.financial_year = ch.fy
+    LEFT JOIN cohort co
+        ON l.insurer_name = co.insurer
+)
+
+SELECT * FROM final
+ORDER BY total_economic_leakage_cr DESC
+  
+  limit 5
+
+[0m23:48:21.864308 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:48:22.330676 [debug] [Thread-1 (]: SQL status: OK in 0.466 seconds
+[0m23:48:22.356819 [debug] [Thread-1 (]: On model.india_insurance_leakage.fct_leakage: Close
+[0m23:48:22.379050 [debug] [Thread-1 (]: Finished running node model.india_insurance_leakage.fct_leakage
+[0m23:48:22.382805 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:48:22.384198 [debug] [MainThread]: Connection 'list_india_insurance_main_marts' was properly closed.
+[0m23:48:22.385417 [debug] [MainThread]: Connection 'list_india_insurance_main_staging' was properly closed.
+[0m23:48:22.386494 [debug] [MainThread]: Connection 'list_india_insurance_main_intermediate' was properly closed.
+[0m23:48:22.387675 [debug] [MainThread]: Connection 'model.india_insurance_leakage.fct_leakage' was properly closed.
+[0m23:48:22.390737 [debug] [MainThread]: Command end result
+[0m23:48:22.519650 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\office\india-insurance-leakage\dbt_project\target\manifest.json
+[0m23:48:22.528989 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\office\india-insurance-leakage\dbt_project\target\semantic_manifest.json
+[0m23:48:22.547024 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\office\india-insurance-leakage\dbt_project\target\run_results.json
+[0m23:48:22.552009 [info ] [MainThread]: Previewing node 'fct_leakage':
+| insurer_name | financial_year | leakage_risk_tier | longterm_retentio... | total_premium_cr | first_year_premiu... | ... |
+| ------------ | -------------- | ----------------- | -------------------- | ---------------- | -------------------- | --- |
+| HDFC Life    | FY2025         | MEDIUM            | MODERATE             |           71,045 |               12,976 | ... |
+| Max Life     | FY2025         | MEDIUM            | MODERATE             |           15,301 |                2,896 | ... |
+| SUD Life     | FY2025         | CRITICAL          | CRITICAL - majori... |            8,260 |                1,345 | ... |
+
+[0m23:48:22.560999 [debug] [MainThread]: Command `cli show` succeeded at 23:48:22.560580 after 13.77 seconds
+[0m23:48:22.562212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002839677C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028396E1E990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028396E1E8E0>]}
+[0m23:48:22.563406 [debug] [MainThread]: Flushing usage events
+[0m23:48:25.111506 [debug] [MainThread]: An error was encountered while trying to flush usage events

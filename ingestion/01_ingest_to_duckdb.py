@@ -132,8 +132,7 @@ print(result3.to_string(index=False))
 # ── SCHEMA SUMMARY ────────────────────────────────────────────────
 print("\n── DuckDB schema created ─────────────────────────────────")
 tables = con.execute("""
-    SELECT table_schema, table_name,
-           estimated_size
+    SELECT table_schema, table_name
     FROM information_schema.tables
     WHERE table_schema = 'raw'
 """).df()
