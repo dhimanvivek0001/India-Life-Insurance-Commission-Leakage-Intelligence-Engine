@@ -12,6 +12,8 @@ The system has two data paths: a batch path processing annual IRDAI filings, and
 ---
 
 ## 2. Architecture Diagram
+<img width="1430" height="762" alt="diagram-export-13-4-2026-5_57_49-pm" src="https://github.com/user-attachments/assets/9dd63766-957d-49b1-ab00-d30a051ea457" />
+
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
