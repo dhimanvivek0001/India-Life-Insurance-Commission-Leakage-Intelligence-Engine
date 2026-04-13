@@ -350,7 +350,7 @@ base — replacing them costs ₹1,80,200 per policy × lapses.
 | Priority | Action | Investment | Expected Return |
 |---|---|---|---|
 | 1 | Emergency: restructure banca commission to 50/50 upfront/performance | Nil | Estimated 4pp lapse improvement = ₹12 Cr savings |
-| 2 | Post-sale engagement system (KPOINT or equivalent) | ₹0.37 Lakh/yr | ₹200 Cr CAC savings |
+| 2 | Post-sale engagement system  | ₹0.37 Lakh/yr | ₹200 Cr CAC savings |
 | 3 | Begin agency channel development — target 80% banca by FY2027 | ₹50 Cr over 3 yrs | 6pp lapse improvement = ₹18 Cr savings/yr |
 | 4 | Deploy lapse prediction model | ₹0.15 Cr | ₹26 Cr/yr recoverable |
 
@@ -519,7 +519,6 @@ python -m streamlit run streamlit/app.py
 
 **Vivek Dhiman**
 MSc Business Analytics — J.E. Cairnes School of Business, University of Galway
-Prior experience: KPOINT Technologies, ADDA.io
 [GitHub](https://github.com/dhimanvivek0001)
 
 ---
